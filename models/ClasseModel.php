@@ -48,6 +48,8 @@ class ClasseModel
             ]);
             return  true;
         }catch (\PDOException $PDOException){
+            $request->session->set("error",$PDOException);
+            //$request->session->set("error","impossible de supprimé utilisateur");
             return false;
         }
     }

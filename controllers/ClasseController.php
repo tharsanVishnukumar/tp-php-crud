@@ -35,6 +35,10 @@ class ClasseController
     public function delete(\App\Request $request,\App\Response $response): string
     {
         $classe = ClasseModel::deleteById($request->params["id"]);
+        // if($classe === false){
+            
+        // }
+
         return $response->redirect("/classe");
     }
     public function create(\App\Request $request,\App\Response $response):string

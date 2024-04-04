@@ -14,7 +14,7 @@
         </a>
     </div>
 
-    <?php if(count($classes)):?>
+    <?php if(count($classes) > 0):?>
         <table class="table text-center">
             <thead>
             <tr>

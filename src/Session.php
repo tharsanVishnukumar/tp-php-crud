@@ -13,7 +13,7 @@ class Session
         $_SESSION[$key] = $value;
     }
     public function get(string $key):string|bool{
-        $value =$_SESSION[$key];
+        $value = $_SESSION[$key];
         if($value !== null){
             return $value;
         }
