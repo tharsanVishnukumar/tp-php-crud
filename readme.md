@@ -1,4 +1,5 @@
-# requirements
+# php crud by tharsan
+## requirements
 - [php](https://www.php.net/downloads.php)  ou [xampp](https://www.apachefriends.org/download.html)
 - [composer](https://getcomposer.org/download/) ou [Installer Composer sur Windows avec XAMPP](https://www.thecodedeveloper.com/install-composer-windows-xampp/)
 
