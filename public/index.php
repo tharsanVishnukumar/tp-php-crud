@@ -4,7 +4,6 @@ require "../vendor/autoload.php";
 use App\Application;
 use App\Config;
 
-
 Config::load();
 new Config();
 $app = new Application();
