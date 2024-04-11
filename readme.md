@@ -1,16 +1,18 @@
 # requirements
-- [php](https://www.php.net/downloads.php)  or [xampp](https://www.apachefriends.org/download.html)
-- [composer](https://getcomposer.org/download/) or [Installer Composer sur Windows avec XAMPP](https://www.thecodedeveloper.com/install-composer-windows-xampp/)
+- [php](https://www.php.net/downloads.php)  ou [xampp](https://www.apachefriends.org/download.html)
+- [composer](https://getcomposer.org/download/) ou [Installer Composer sur Windows avec XAMPP](https://www.thecodedeveloper.com/install-composer-windows-xampp/)
 
 ## installer les paquets
-- `composer update`
+ ````shell
+$ composer update
+````
 
 ## config
 toutes les variable de configuration sont dans le fichier ``.env``
 
 ## installation de la base de donnée (migration)
 ````shell
-php ./migration.php
+$ php ./migration.php
 ````
 
 si il y a l'erreur ci-dessous, il faut activer ``extension=pdo_mysql`` dans php.ini
@@ -27,13 +29,16 @@ Stack trace:
 
 ### windows
 ````shell
-./run.bat
+$ ./run.bat
 ````
 
 ### linux
 ````shell
-./run.sh
+$ ./run.sh
 ````
-
+ou 
+````shell
+$ php -S localhost:8080 -t .\public
+````
 
 
