@@ -8,7 +8,6 @@
  ````shell
 $ composer update
 ````
-
 ## config
 toutes les variable de configuration sont dans le fichier ``.env``
 
