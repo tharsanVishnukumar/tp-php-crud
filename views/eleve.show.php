@@ -24,6 +24,7 @@
                 <th scope="col">email</th>
                 <th scope="col">date de naissance</th>
                 <th scope="col">classe</th>
+                <th scope="col">genre</th>
                 <th scope="col">Action</th>
             </tr>
             </thead>
@@ -50,10 +51,19 @@
                         <?=$eleve["classe_libelle"]?>
                     </td>
                     <td>
+                        <?=$eleve["sexe"] === "m" ? "masculin" : "féminin"?>
+                    </td>
+                    <td>
                         <button type="button" class="btn btn-link">
                             <a href="<?="/eleve/edit/".$eleve["eleve_id"]?>">Modifier</a>
-                        </button><button type="button" class="btn btn-link">
+                        </button>
+                        <button type="button" class="btn btn-link">
                             <a href="<?="/eleve/delete/".$eleve["eleve_id"]?>">Supprimer</a>
+                        </button>
+                        <button type="button" class="btn btn-link">
+                            <a href="<?="/diplome/eleve/".$eleve["eleve_id"]?>">
+                                Ajouter un diplôme
+                            </a>
                         </button>
                     </td>
                 </tr>

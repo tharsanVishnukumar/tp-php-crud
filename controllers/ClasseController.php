@@ -26,19 +26,22 @@ class ClasseController
     }
     public function edit(\App\Request $request,\App\Response $response):string
     {
-        $result =  ClasseModel::updateLibelle($request->params["id"],$request->body["classe-name"]);
-        if($result === false){
+        $className = $request->body["classe-name"];
+        $classeId = $request->params["id"];
+
+        if(ClasseModel::isExist($className)){
+            $request->session->set("error","le nom de la classe et déjà utilisé");
+            return $response->redirect("/classe/edit/".$classeId);
+        }
+        $result =  ClasseModel::updateLibelle($classeId,$className);
+        if($result === false) {
             return $response->render("error");
         }
         return $response->redirect("/classe");
     }
     public function delete(\App\Request $request,\App\Response $response): string
     {
-        $classe = ClasseModel::deleteById($request->params["id"]);
-        // if($classe === false){
-            
-        // }
-
+        ClasseModel::deleteById($request->params["id"]);
         return $response->redirect("/classe");
     }
     public function create(\App\Request $request,\App\Response $response):string
@@ -48,9 +51,7 @@ class ClasseController
             $request->session->set("error","le nom de la classe et déjà utilisé");
             return $response->redirect("/classe/create");
         }
-
         $classe = new ClasseModel($className);
-
         $classe->save(Application::$instance->database);
         return  $response->redirect("/classe");
     }

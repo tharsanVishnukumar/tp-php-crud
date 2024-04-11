@@ -43,6 +43,14 @@
             >
         </div>
         <div class="form-group mb-2">
+            <label for="sexe">le genre  de l'éleve</label>
+            <select class="form-select" required name="sexe" id="sexe">
+                <option selected>sélection un genre</option>
+                <option value="m">masculin</option>
+                <option value="f">féminin</option>
+            </select>
+        </div>
+        <div class="form-group mb-2">
             <label for="dateOfBirth">date de naissance de l'élève</label>
             <input
                 name="dateOfBirth"

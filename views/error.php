@@ -1,4 +1,5 @@
+<?php /** @var string $error */?>
 <div class="container ">
     error
-<!--    --><?php //=$error?>
+    <?=$error?>
 </div>

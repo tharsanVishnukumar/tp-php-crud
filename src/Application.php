@@ -14,6 +14,7 @@ class Application {
         $this->response = new Response();
         $this->database = new Database();
     }
+
     public function run(): void {
         echo $this->router->resolve($this->request,$this->response);
     }
@@ -21,6 +22,5 @@ class Application {
         echo "<pre>";
         var_dump($value);
         echo "</pre>";
-
     }
 }

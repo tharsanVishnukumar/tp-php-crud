@@ -13,10 +13,13 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 echo "database connect".PHP_EOL;
 $migrationQuery = file_get_contents("./sql/migration.sql");
-$pdo->query("create database if not exists $dbname;");
 
+$pdo->exec("create database if not exists $dbname;");
 echo "database $dbname created".PHP_EOL;
+$pdo->exec("use $dbname");
 
-$pdo->query("use $dbname");
-$pdo->query($migrationQuery);
+$pdo->exec($migrationQuery);
 echo "migration done".PHP_EOL;
+
+
+

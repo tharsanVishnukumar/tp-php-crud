@@ -1,6 +1,6 @@
 <div class="container mt-5">
     <h2>
-        Crée un classe
+        Crée une classe
     </h2>
     <form method="POST" action="/classe/create">
         <div class="form-group mb-2">
