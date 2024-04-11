@@ -24,8 +24,6 @@ Stack trace:
 #1 {main}
   thrown in C:\xampp\htdocs\tp-php-crud\migration.php on line 11
 ````
-
-
 ## lancé le serveur php avec l'une des commande suivant
 
 ### windows
