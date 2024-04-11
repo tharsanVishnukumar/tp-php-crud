@@ -42,18 +42,3 @@ $app->router->get("/diplome/eleve/[:id]",[\Controller\DiplomeController::class,"
 $app->router->post("/diplome/eleve/[:id]",[\Controller\DiplomeController::class,"add"]);
 $app->router->get("/diplome/[:diplomeid]/eleve/[:eleveid]/delete",[\Controller\DiplomeController::class,"removeDiplome"]);
 $app->run();
-//try {
-//
-//
-//
-//} catch (\Exception $exception) {
-//    if($exception instanceof PDOException){
-//        if($exception->getCode() == 2002){
-//            echo "impossible de se connecter a la base de donnée";
-//        }else{
-//            echo  $exception->getMessage()."<br/>";
-//        }
-//    }else{
-//        Application:print($exception);
-//    }
-//}
